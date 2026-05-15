@@ -54,7 +54,8 @@ section[data-testid="stSidebar"] {
 """, unsafe_allow_html=True)
 
 
-df = pd.read_csv("Artists.csv")
+df = pd.read_csv("../data/Artists.csv")
+
 
 
 
