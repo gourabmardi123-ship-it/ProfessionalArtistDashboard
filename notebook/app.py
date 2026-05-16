@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
+
 
 
 st.set_page_config(
@@ -54,7 +56,10 @@ section[data-testid="stSidebar"] {
 """, unsafe_allow_html=True)
 
 
-df = pd.read_csv("../data/Artists.csv")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+csv_path = os.path.join(BASE_DIR, "data", "Artists.csv")
+
+df = pd.read_csv(csv_path)
 
 
 
